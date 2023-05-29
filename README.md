@@ -13,10 +13,10 @@ Explore the data-fns library from Webpack
 Explore the local-storage feature
 
 Task:
-- [ ] title
-- [ ] description
-- [ ] dueDate
-- [ ] priority
+- [x] title
+- [x] description
+- [x] dueDate
+- [x] priority
 optionals to add:
 - [ ] notes
 - [ ] checklist
