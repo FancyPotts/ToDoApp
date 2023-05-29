@@ -1,0 +1,12 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "The intention of this project is to continue learning about WebPack, build it out best as can following DRY and SOLID principles. The goal is to build an app that uses loosely coupled code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

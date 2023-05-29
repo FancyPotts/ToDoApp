@@ -12,7 +12,7 @@ Explore the data-fns library from Webpack
 
 Explore the local-storage feature
 
-Each task will have:
+Task:
 - [ ] title
 - [ ] description
 - [ ] dueDate
@@ -21,8 +21,8 @@ optionals to add:
 - [ ] notes
 - [ ] checklist
 
-UI should be able to:
-- [ ] View all projects
+UI:
+- [ ] View all projects/tasks
 - [ ] View all todos in each projects
 - [ ] Expand on a single todo to see and edit details
 - [ ] Delete or check off a todo
