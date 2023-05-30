@@ -18,13 +18,12 @@ Task:
 - [x] dueDate
 - [x] priority
 optionals to add:
-- [x] notes
-- [x] checklist
-
+- [ ] notes
+- [ ] checklist
 
 UI:
 - [ ] View all projects/tasks
-- [ ] View all todos in each project
+- [ ] View all todos in each projects
 - [ ] Expand on a single todo to see and edit details
 - [ ] Delete or check off a todo
 

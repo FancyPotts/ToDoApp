@@ -31,3 +31,5 @@ const taskManager = (function () {
         }
 }
 })()
+
+taskManager.addTask('First', 'Create a task', 'Tomorrow', 'Low')
