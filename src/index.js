@@ -37,6 +37,7 @@ const taskManager = (function () {
 
 const displayTasks = function () {
   const currentTasks = taskManager.getAllTasks()
+  document.body.innerHTML = ''
   for (let i = 0; i < currentTasks.length; i++) {
     const deployTaskTitle = document.createElement('div')
     const deployTaskDesc = document.createElement('div')
