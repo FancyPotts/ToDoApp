@@ -21,6 +21,7 @@ optionals to add:
 - [ ] notes
 - [ ] checklist
 
+
 UI:
 - [ ] View all projects/tasks
 - [ ] View all todos in each projects

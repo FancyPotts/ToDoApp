@@ -39,11 +39,16 @@ const displayTasks = function () {
   const currentTasks = taskManager.getAllTasks()
   document.body.innerHTML = ''
   for (let i = 0; i < currentTasks.length; i++) {
-    const deployTaskTitle = document.createElement('div')
+    const deployTaskTitle = document.createElement('button')
     const deployTaskDesc = document.createElement('div')
+    const task = taskManager.showTask(i)
 
-    deployTaskTitle.innerHTML = taskManager.showTask(i).title
-    deployTaskDesc.innerHTML = taskManager.showTask(i).desc
+    deployTaskTitle.innerHTML = task.title
+    deployTaskDesc.innerHTML = task.desc
+
+    deployTaskTitle.addEventListener('click', function () {
+      alert(`${task.title}\n${task.desc}\n${task.dueDate}\n${task.priority}\n${task.note}`)
+    })
 
     document.body.appendChild(deployTaskTitle)
     document.body.appendChild(deployTaskDesc)
