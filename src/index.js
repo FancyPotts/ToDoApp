@@ -35,27 +35,52 @@ const taskManager = (function () {
   }
 })()
 
-const displayTasks = function () {
+const displayTask = function (i) {
+  const deployTaskTitle = document.createElement('button')
+  const deleteTaskButton = document.createElement('button')
+  const deployTaskDesc = document.createElement('div')
+  const task = taskManager.showTask(i)
+
+  deployTaskTitle.innerHTML = task.title
+  deployTaskDesc.innerHTML = task.desc
+  deleteTaskButton.innerHTML = 'Delete this task'
+
+  deployTaskTitle.addEventListener('click', function () {
+    alert(`${task.title}\n${task.desc}\n${task.dueDate}\n${task.priority}\n${task.note}`)
+  })
+  deleteTaskButton.addEventListener('click', function (i) {
+    taskManager.deleteTask(i)
+  })
+
+  document.body.appendChild(deployTaskTitle)
+  document.body.appendChild(deployTaskDesc)
+  document.body.appendChild(deleteTaskButton)
+}
+
+const displayAllTasks = function () {
   const currentTasks = taskManager.getAllTasks()
-  document.body.innerHTML = ''
   for (let i = 0; i < currentTasks.length; i++) {
-    const deployTaskTitle = document.createElement('button')
-    const deployTaskDesc = document.createElement('div')
-    const task = taskManager.showTask(i)
-
-    deployTaskTitle.innerHTML = task.title
-    deployTaskDesc.innerHTML = task.desc
-
-    deployTaskTitle.addEventListener('click', function () {
-      alert(`${task.title}\n${task.desc}\n${task.dueDate}\n${task.priority}\n${task.note}`)
-    })
-
-    document.body.appendChild(deployTaskTitle)
-    document.body.appendChild(deployTaskDesc)
+    displayTask(i)
   }
 }
+
+const buttonCreateTask = function () {
+  const newTaskBtn = document.createElement('button')
+
+  newTaskBtn.addEventListener('click', function () {
+    const taskName = prompt('Name y0 task', 'Run')
+    updatedLength = taskManager.getAllTasks().length
+    taskManager.addTask(taskName)
+    displayTask(updatedLength)
+  })
+
+  newTaskBtn.innerHTML = 'Add a task'
+  document.body.appendChild(newTaskBtn)
+}
+
+buttonCreateTask()
 
 taskManager.addTask('First', 'Create a task', 'Tomorrow', 'Low')
 taskManager.addTask('Second', 'Display the tasks', 'Tonight', 'Low')
 
-displayTasks()
+displayAllTasks()
